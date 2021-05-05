@@ -9,7 +9,7 @@ import com.sun.net.httpserver.*;
 public class App {
     
     public static void main(String args[]) throws IOException { 
-        HttpServer server = HttpServer.create(new InetSocketAddress("localhost", 8002),0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(5000),0);
         System.out.println("Attempting to connect to server...");
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
@@ -22,7 +22,7 @@ public class App {
             URI reqURI = t.getRequestURI();
             String uri = reqURI.toString();
             String fileName = uri.substring(uri.lastIndexOf("/")+1);
-            File file = new File(fileName);
+            File file = new File("./Files/" +fileName);
             Scanner in = new Scanner(file);
             String response = "";
             while(in.hasNextLine()) {
