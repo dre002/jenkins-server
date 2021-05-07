@@ -4,7 +4,7 @@ pipeline{
         stage("Package") {
             agent {
                 docker {
-                    image 'maven 3.5.4'
+                    image 'maven:3.5.4'
                 }
             }
             steps {
@@ -14,7 +14,7 @@ pipeline{
         stage("Test") {
             agent {
                 docker{
-                    image 'maven 3.5.4'
+                    image 'maven:3.5.4'
                 }
             }
             steps {
