@@ -4,11 +4,7 @@ pipeline{
         stage("Package") {
             agent {
                 docker {
-<<<<<<< HEAD
                     image 'maven:3.5.4'
-=======
-                    image 'maven 3.5.4'
->>>>>>> 509c9fcaf54f128462614fb90ba66723ed832b28
                 }
             }
             steps {
@@ -18,11 +14,7 @@ pipeline{
         stage("Test") {
             agent {
                 docker{
-<<<<<<< HEAD
                     image 'maven:3.5.4'
-=======
-                    image 'maven 3.5.4'
->>>>>>> 509c9fcaf54f128462614fb90ba66723ed832b28
                 }
             }
             steps {
