@@ -9,7 +9,7 @@ import com.sun.net.httpserver.*;
 public class App {
     
     public static void main(String args[]) throws IOException { 
-        HttpServer server = HttpServer.create(new InetSocketAddress(5000),0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(5001),0);
         System.out.println("Attempting to connect to server...");
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
