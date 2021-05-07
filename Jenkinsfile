@@ -25,6 +25,7 @@ pipeline{
             agent any
             steps {
                 sh 'pwd'
+                sh 'docker kill $(docker ps -q)'
                 sh 'docker rm $(docker ps -a -q)'
                 sh 'docker build . --tag server'
             }
