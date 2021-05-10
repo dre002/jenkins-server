@@ -14,7 +14,6 @@ public class App {
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start(); 
-        System.out.println("Just to trigger Jenkins.");
     } 
 
     static class MyHandler implements HttpHandler {
