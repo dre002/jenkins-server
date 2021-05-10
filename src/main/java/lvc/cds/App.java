@@ -14,7 +14,7 @@ public class App {
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
-        System.out.println("Hello World!"); 
+        
     } 
 
     static class MyHandler implements HttpHandler {
