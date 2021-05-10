@@ -13,7 +13,8 @@ public class App {
         System.out.println("Attempting to connect to server...");
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
-        server.start(); 
+        server.start();
+        System.out.println("Hello World!"); 
     } 
 
     static class MyHandler implements HttpHandler {
